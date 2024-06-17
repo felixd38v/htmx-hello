@@ -13,12 +13,16 @@
         <button 
             hx-get="/users"
             hx-target="#people"
+            hx-vals='{"limit":3}'
+            hx-indicator="#loading"
             hx-confirm="Are you sure you want to see the list of all employees?"
             class="btn btn-primary"
             
             > Fetch data 
         </button> 
-
+        
+        <div id="loading" class="htmx-indicator spinner-border" role="status">
+        </div>
         <div id="people"></div>
     </div> 
 
